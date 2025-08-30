@@ -1,0 +1,15 @@
+pyrofork
+tgcrypto
+motor
+aiocache
+pytz
+python-dateutil
+requests
+pillow
+psutil
+rich
+apscheduler
+configparser
+aiohttp
+cachetools
+lexica-api
