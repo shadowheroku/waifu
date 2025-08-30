@@ -8,16 +8,16 @@ config = configparser.ConfigParser()
 config.read(config_file)
 
 # Telegram settings
-api_id = int(config.get('telegram', 'api_id'))
-api_hash = config.get('telegram', 'api_hash')
-bot_token = config.get('telegram', 'bot_token')
+api_id = 23212132
+api_hash = "1c17efa86bdef8f806ed70e81b473c20"
+bot_token = "8149734906:AAEIooBVwLrMTpbePlevc-h3AHFGj1XWX94"
 
 # Shortener API
 API_TOKEN = config.get('shortener', 'api_token')
 
 # User IDs
-OWNER_ID = int(config.get('users', 'owner_id'))
-BOT_ID = int(config.get('users', 'bot_id'))
+OWNER_ID = 8429156335
+BOT_ID = 8013665655
 ADI = int(config.get('users', 'adi'))
 AYUSH = int(config.get('users', 'ayush'))
 SUNG = int(config.get('users', 'sung'))
@@ -25,24 +25,26 @@ ZERO = int(config.get('users', 'zero'))
 OWNERS = [int(id.strip()) for id in config.get('users', 'owners').split(',')]
 
 # Channel IDs
-SUPPORT_CHAT_ID = int(config.get('channels', 'support_chat_id'))
-LOG_CHANNEL = int(config.get('channels', 'log_channel'))
-ERRORS = int(config.get('channels', 'errors'))
-GLOG = int(config.get('channels', 'glog'))
-SUPPORT_GROUP_URL = config.get('channels', 'support_group_url')
+SUPPORT_CHAT_ID = -1002800777153
+LOG_CHANNEL = -1002800777153
+ERRORS = -1002800777153
+GLOG = -1002800777153
+SUPPORT_GROUP_URL = "https://t.me/MonicLogs"
 
 
 # General settings
-DEFAULT_LANG = config.get('settings', 'default_lang')
-REDEEM_AMOUNT = int(config.get('settings', 'redeem_amount'))
-DEFAULT_DROP_COUNT = int(config.get('settings', 'default_drop_count'))
-MINIMUM_MEMBERS = int(config.get('settings', 'minimum_members'))
-CLAIM_STICKER_ID = str(config.get('settings', 'claim_sticker_id'))
-BET_STICKER_ID = str(config.get('settings', 'bet_sticker_id'))
+# General settings
+DEFAULT_LANG = config.get('settings', 'default_lang', fallback='en')  # default language: English
+REDEEM_AMOUNT = int(config.get('settings', 'redeem_amount', fallback='100'))  # default redeem amount: 100 coins
+DEFAULT_DROP_COUNT = int(config.get('settings', 'default_drop_count', fallback='5'))  # default drop count: 5
+MINIMUM_MEMBERS = int(config.get('settings', 'minimum_members', fallback='10'))  # minimum group members: 10
+CLAIM_STICKER_ID = config.get('settings', 'claim_sticker_id', fallback='CAACAgQAAyEFAASm8HfBAAI7tGiyw8SNwJ0sVaUhW69sMXuALMIIAAIwEQACFvpYUPu-gNcdMet4HgQ')  # sample sticker ID
+BET_STICKER_ID = config.get('settings', 'bet_sticker_id', fallback='CAACAgQAAyEFAASm8HfBAAI7tGiyw8SNwJ0sVaUhW69sMXuALMIIAAIwEQACFvpYUPu-gNcdMet4HgQ')  # sample sticker ID
+
 
 # Database settings
-MONGO_URL = config.get('database', 'mongo_url')
-DATABASE_NAME = config.get('database', 'database_name')
+MONGO_URL = "mongodb+srv://ryumasgod:ryumasgod@cluster0.ojfkovp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+DATABASE_NAME = "Shadow"
 
 # Image settings
 IMG_BB_URL = config.get('images', 'img_bb_url')
