@@ -8,9 +8,9 @@ config = configparser.ConfigParser()
 config.read(config_file)
 
 # Telegram settings
-api_id = 23212132
-api_hash = "1c17efa86bdef8f806ed70e81b473c20"
-bot_token = "8013665655:AAFbn4ZUUXAUqXV1HBvGdrcDFiYaDY9Y4do"
+api_id = 
+api_hash = ""
+bot_token = ""
 
 # Shortener API
 API_TOKEN = config.get('shortener', 'api_token')
